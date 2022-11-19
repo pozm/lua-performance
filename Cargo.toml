@@ -6,4 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rluau = { git="https://github.com/Vurv78/rluau.git", branch="dev" }
+mlua = { version = "0.8.6", features=["luau"] }
