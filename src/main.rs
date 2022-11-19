@@ -22,8 +22,9 @@ macro_rules! test_speed {
 
 fn main() {
     let mut code = std::env::args().nth(1).unwrap_or("print('default')".to_string());
-    if let Ok(f) =  File::open(code) {
-        f.read_to_string(&mut code)
+    if let Ok(mut f) =  File::open(&code) {
+        code.clear();
+        f.read_to_string(&mut code);
     };
     println!("code : {}", code);
 
